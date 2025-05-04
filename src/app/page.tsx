@@ -29,7 +29,7 @@ export default function Home() {
           >
             <Image
               className={styles.logo}
-              src="/vercel.svg"
+              src="@/vercel.svg"
               alt="Vercel logomark"
               width={20}
               height={20}
@@ -54,7 +54,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/file.svg"
+            src="@/file.svg"
             alt="File icon"
             width={16}
             height={16}
