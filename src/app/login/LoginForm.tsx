@@ -76,7 +76,7 @@ export default function LoginForm() {
         setMessage('Login realizado com sucesso!');
         setError("");
       }
-    } catch (error) {
+    } catch {
       setError("Erro ao conectar com o servidor.");
     } finally {
       setLoading(false);

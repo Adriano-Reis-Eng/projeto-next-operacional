@@ -41,7 +41,7 @@ export default function DeleteForm() {
                 setCracha(user.cracha || "");
                 setNome(user.nome || "");
             }
-        } catch (error) {
+        } catch {
             setError("Erro ao buscar usuário.");
         } finally {
             setApagando(false);
@@ -74,7 +74,7 @@ export default function DeleteForm() {
                 setMessage(result.message);
                 setError("");
             }
-        } catch (error) {
+        } catch {
             setError("Erro ao conectar com o servidor.");
         }        
     }

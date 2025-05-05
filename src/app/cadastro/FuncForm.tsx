@@ -44,7 +44,7 @@ export default function DeleteForm() {
                 setFuncionarios(result.message);
                 setMessage("Funcionário encontrado.");
             }
-        } catch (error) {
+        } catch {
             setError("Erro ao buscar usuário.");
         } finally {
             setBuscando(false);

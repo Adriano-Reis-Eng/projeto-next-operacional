@@ -83,7 +83,7 @@ export default function EscalaPage() {
                     setDiaSemana(result.message.dia || "");
                     setError("");
                 }
-            } catch (error) {
+            } catch {
                 setError("Erro ao conectar com o servidor.");
             } finally {
                 setLoading(false);

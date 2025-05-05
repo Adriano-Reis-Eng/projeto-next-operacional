@@ -49,7 +49,7 @@ export default function Cadastro() {
                 setMessage(result.message);
                 setError("");
             }
-        } catch (error) {
+        } catch {
             setError("Erro ao conectar com o servidor.");
         }
         finally {

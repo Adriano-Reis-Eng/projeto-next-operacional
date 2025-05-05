@@ -49,7 +49,7 @@ export default function ListaForm() {
                 setMessage("Lista encontrada");
             }
 
-        } catch (error) {
+        } catch {
             setError("Erro ao conectar com o servidor.");
         }        
     }

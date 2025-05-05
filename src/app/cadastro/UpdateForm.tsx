@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./UpdateForm.module.css";
 import InputBtn from "../components/InputBtn";
 
@@ -56,7 +56,7 @@ export default function Update() {
                 setSenha(user.senha);
                 setEscala(user.escala || "");
             }
-        } catch (error) {
+        } catch {
             setError("Erro ao buscar usuário.");
         } finally {
             setBuscando(false);
@@ -100,7 +100,7 @@ export default function Update() {
                 setMessage(result.message);
                 setError("");
             }
-        } catch (error) {
+        } catch {
             setError("Erro ao conectar com o servidor.");
         }
         finally {
