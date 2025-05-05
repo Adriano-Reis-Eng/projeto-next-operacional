@@ -17,8 +17,7 @@ export default function DeleteForm() {
     const [message, setMessage] = useState("");
     const [crachaBusca, setCrachaBusca] = useState("");
     const [buscando, setBuscando] = useState(false);
-    const [funcionario, setFuncionarios] = useState<Funcionarios[]>([]);
-    const [nome, setNome] = useState("");
+    const [funcionario, setFuncionarios] = useState<Funcionarios[]>([]);    
 
     async function handleBuscarUsuario(e: React.FormEvent) {
         e.preventDefault();
@@ -50,38 +49,7 @@ export default function DeleteForm() {
         } finally {
             setBuscando(false);
         }
-    }
-
-    async function handleSubmit(e: React.FormEvent) {
-        e.preventDefault();
-        setError("");
-        try {
-            const response = await fetch("/api/login", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    funcao: "deleteUser",
-                    sheet: 'usuarios',
-                    token: sessionStorage.getItem('token'),
-                    data: {
-                        cracha: crachaBusca
-                    },
-                }),
-            });
-            const result = await response.json();
-            if (result.success == false) {
-                setError(result.message);
-                setMessage("")
-            }
-            else if (result.success == true) {
-                setMessage(result.message);
-                setError("");
-            }
-        } catch (error) {
-            setError("Erro ao conectar com o servidor.");
-        }
-    }
-
+    }    
     return (
         <>
             {/* Formulário de busca de usuário */}

@@ -11,27 +11,25 @@ interface Funcionarios {
 }
 
 export default function ListaForm() {
-    const [funcionarios, setFuncionarios] = useState<Funcionarios[]>([]);
-    const [loading, setLoading] = useState(false);
+    const [funcionarios, setFuncionarios] = useState<Funcionarios[]>([]);    
     const [error, setError] = useState("Lista vazia");
     const [message, setMessage] = useState("Buscando...");
     useEffect(() => {
         const usuario = sessionStorage.getItem('cargo');
-    if (usuario === 'Administrador') {
-        fetchFuncionarios(); // chamada automática ao carregar
-    }
-    }, []);   
+        if (usuario === 'Administrador') {
+            fetchFuncionarios(); // chamada automática ao carregar
+        }
+    }, []);
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         await fetchFuncionarios();
     }
 
-    async function fetchFuncionarios() {        
-        setLoading(true);
+    async function fetchFuncionarios() {
         setError("");
 
         const token = sessionStorage.getItem("token");
-        
+
 
         try {
             const response = await fetch("/api/login", {
@@ -56,14 +54,11 @@ export default function ListaForm() {
 
         } catch (error) {
             setError("Erro ao conectar com o servidor.");
-        }
-        finally {
-            setLoading(false);
-        }
+        }        
     }
 
     return (
-        <form onSubmit={handleSubmit} className={styles.listaForm}>            
+        <form onSubmit={handleSubmit} className={styles.listaForm}>
             {funcionarios.length > 0 && (
                 <div className={styles.resultado}>
                     <table className={styles.tabelaEscala}>
@@ -90,10 +85,8 @@ export default function ListaForm() {
                             ))}
                         </tbody>
                     </table>
-
                 </div>
-
-            )}            
+            )}
             {error && <p className={styles.errorMsg}>{error}</p>}
             {message && <p className={styles.successMsg}>{message}</p>}
         </form>

@@ -44,6 +44,7 @@ export default function DeleteForm() {
         } catch (error) {
             setError("Erro ao buscar usuário.");
         } finally {
+            setApagando(false);
             setBuscando(false);
         }
     }
