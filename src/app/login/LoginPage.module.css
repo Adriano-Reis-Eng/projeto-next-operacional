@@ -4,9 +4,14 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-image: url('/imgporta.jpg');     
+  background-size:cover ;
+  background-repeat: no-repeat;
+  background-position: center;  
 }
 
 .container {
+  background-color: #fff;
   width: 300px;
   max-width: 28rem;
   padding: 2rem;

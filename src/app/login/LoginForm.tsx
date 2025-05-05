@@ -39,7 +39,7 @@ export default function LoginForm() {
     setLogado(false);
     setMessage("Você saiu da conta.");
   }
-
+  
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     console.log("teste")  

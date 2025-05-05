@@ -9,18 +9,22 @@ export default function AvisoForm() {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                minHeight: '100vh', // ocupa a altura total da tela
+                minHeight: '100vh',
                 margin: 0,
                 gap: 50,
                 width: '100%',
-            }} className="formAviso">
+                backgroundImage: 'url("/imgarquivo.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}
+            className="formAviso">
             <h1 style={{ color: 'black', textAlign: 'center' }}>
                 Atenção!
             </h1>
-            <h1 style={{ color: 'black', textAlign: 'center'}}>
+            <h1 style={{ color: 'black', textAlign: 'center' }}>
                 Somente administradores podem fazer alterações nos cadastros.
             </h1>
-            <h2 style={{ color: 'black', textAlign: 'center'}}>
+            <h2 style={{ color: 'black', textAlign: 'center' }}>
                 Caso seja necessário alterar alguma informação procure o seu Administrador.
             </h2>
         </form>

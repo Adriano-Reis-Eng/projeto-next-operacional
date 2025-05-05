@@ -5,10 +5,14 @@
   justify-content: center;
   margin-bottom: 100px;
   min-height: 100vh;
-  margin-top: 50px;
-  margin-left: 5%;
+  margin-top: 50px;  
   padding: 2rem;
   gap: 2rem;
+  background-image: url('/imgabstract.jpg');       
+  background-size:auto ;
+  background-repeat: no-repeat;
+  background-position: center;  
+  color: #000000;
 }
 
 .description {
@@ -17,13 +21,3 @@
   max-width: 60rem;
   text-align: left;
 }
-
-.link {
-  color: #2563eb;
-  text-decoration: none;
-  transition: text-decoration 0.2s;
-}
-
-.link:hover {
-  text-decoration: underline;
-} 

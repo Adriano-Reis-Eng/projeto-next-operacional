@@ -5,32 +5,33 @@
   padding: 4rem;
   gap: 1.5rem;
   min-height: 100vh;
-  background: #f9fafb;
-  color: #111;
-}    
+  background-image: url('/imgheader.jpg');     
+  background-size:cover ;
+  background-repeat: no-repeat;
+  background-position: center;  
+  color: #000000;
+}
 
 .title {
   font-size: 3rem;
-  font-weight: 700;
-  color: #1a202c;
+  font-weight: 700;  
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .subtitle {
   font-size: 1.25rem;
-  color: #4a5568;
+  
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.section {
+.section {  
   margin-bottom: 2rem;
 }
 
 .section h2 {
-  font-size: 1.5rem;
-  color: #2d3748;
+  font-size: 1.5rem;  
   margin-bottom: 1rem;
 }
 
@@ -39,12 +40,13 @@
   padding-left: 1.5rem;
 }
 
-.section p {
+.section p {  
   margin: 0.5rem 0;
 }
 
 .highlight {
   background: #edf2f7;
+  color: black;
   width: 30%;
   margin-left: 20px;
   padding: 1rem;

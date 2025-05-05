@@ -2,6 +2,10 @@
   min-height: 100vh;
   padding: 0 1rem;
   gap: 2rem;  
+  background-image: url("/imgarquivo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }  
 
 .container{
