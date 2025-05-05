@@ -1,0 +1,118 @@
+.cadForm {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+    margin-bottom: 10%;
+    padding: 10px;    
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    color: #1f2937;
+}
+
+.label {
+    display: block;
+    font-size: 0.99rem;
+    color: #374151;
+    margin-bottom: 0.10rem;
+}
+
+.input {
+    width: auto;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    border: 2px solid #d97706;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    color: #1f2937;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+    border-color: #f59e42;
+    box-shadow: 0 0 0 2px #fde68a44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+
+.submitBtn {
+    width: 22%;
+    background: #d97706;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;    
+    transition: box-shadow 0.3s ease, background 1s, opacity 1s;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: #f59e42;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+
+.submitBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.delForm {    
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+
+.deleteBtn {
+    width: auto;
+    background: #f85d5d;     
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, background 1s, opacity 1s;
+}
+
+.deleteBtn:hover:not(:disabled) {
+    background: #ff0000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+
+.deleteBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.errorMsg {
+    color: #dc2626;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.successMsg {
+    color: #16a34a;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}

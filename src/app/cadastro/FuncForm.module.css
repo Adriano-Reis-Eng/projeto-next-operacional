@@ -1,0 +1,139 @@
+.cadForm {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;    
+    background-color: #fff;
+    min-width: 800px;
+    margin-bottom: 10%;       
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    color: #1f2937;
+}
+
+.label {
+    display: block;
+    font-size: 0.99rem;
+    color: #374151;
+    margin-bottom: 0.10rem;
+}
+
+.input {
+    width: auto;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    border: 2px solid #d97706;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    color: #1f2937;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+    border-color: #f59e42;
+    box-shadow: 0 0 0 2px #fde68a44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+
+.submitBtn {
+    width: 22%;
+    background: #d97706;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;    
+    transition: box-shadow 0.3s ease, background 1s, opacity 1s;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: #f59e42;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+
+.submitBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+.resultado {
+    justify-items: center;    
+    width: 90%;
+    height: auto;
+    margin: 10px 0 0 0%;
+    background: #ffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 8);
+    padding: 1rem;
+    overflow-x:auto ;
+}
+.resultado::-webkit-scrollbar {
+    display: none;
+}
+
+.resultado h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.tabelaEscala {
+    background-color: #d97706;    
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.tabelaEscala th,
+.tabelaEscala td {
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+.tabelaEscala th {
+    background: rgb(204, 204, 204);
+    color: #2d3a4b;
+    font-weight: 700;
+    border-bottom: 2px solid #e0e6ed;
+}
+
+.tabelaEscala tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+.tabelaEscala tr:hover {
+    background: #e6f7ff;
+    transition: background 0.2s;
+}
+
+
+.errorMsg {
+    color: #dc2626;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.successMsg {
+    color: #16a34a;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}

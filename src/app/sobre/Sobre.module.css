@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+  margin-bottom: 100px;
+  min-height: 100vh;
+  margin-top: 50px;
+  margin-left: 5%;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.description {
+  margin-left: 30px;
+  font-size: 1.125rem;
+  max-width: 60rem;
+  text-align: left;
+}
+
+.link {
+  color: #2563eb;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+
+.link:hover {
+  text-decoration: underline;
+} 

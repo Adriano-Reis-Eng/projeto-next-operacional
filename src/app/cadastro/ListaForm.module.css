@@ -1,0 +1,70 @@
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.errorMsg {
+    color: #dc2626;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.successMsg {
+    color: #16a34a;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.resultado {
+    justify-items: center;    
+    width: 96%;
+    height: 300px;
+    margin: 10px 0 0 0%;
+    background: #ffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 8);
+    padding: 1rem;
+    overflow-x:auto ;
+}
+.resultado::-webkit-scrollbar {
+    display: none;
+}
+
+.resultado h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.tabelaEscala {
+    background-color: #d97706;
+    ;
+    width: 90%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.tabelaEscala th,
+.tabelaEscala td {
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+.tabelaEscala th {
+    background: rgb(204, 204, 204);
+    color: #2d3a4b;
+    font-weight: 700;
+    border-bottom: 2px solid #e0e6ed;
+}
+
+.tabelaEscala tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+.tabelaEscala tr:hover {
+    background: #e6f7ff;
+    transition: background 0.2s;
+}
