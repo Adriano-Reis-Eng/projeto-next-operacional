@@ -2,17 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 
 const url = "https://script.google.com/macros/s/AKfycbyzzZIakU2RWaacWUtn1jS9URU6i4x9Fqic__ICcibn8bHCvKz5-PA8qpSir4AjIgvH/exec";
              
-export async function Get() {
-  return NextResponse.json({
-    produtos: [{
-      id:1,
-      name:"teste",
-    },
-  ],
-    
-  });
-}
-
 export async function POST(request: NextRequest) {
   const body = await request.json();
 
