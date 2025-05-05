@@ -8,7 +8,7 @@ export default function LoginForm() {
   const [cracha, setCracha] = useState("");
   const [senha, setSenha] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [erro, setError] = useState("");
   const [showSenha, setShowSenha] = useState(false);
   const [message, setMessage] = useState("");
   const [nome, setNome] = useState("");
@@ -132,7 +132,7 @@ export default function LoginForm() {
             </InputBtn>
           )}
         </div>
-        {error && <p className={styles.errorMsg}>{error}</p>}
+        {erro && <p className={styles.errorMsg}>{erro}</p>}
         {message && <p className={styles.successMsg}>{message}</p>}
       </form>
     </>

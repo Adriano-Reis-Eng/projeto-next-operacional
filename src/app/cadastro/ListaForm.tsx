@@ -12,8 +12,9 @@ interface Funcionarios {
 
 export default function ListaForm() {
     const [funcionarios, setFuncionarios] = useState<Funcionarios[]>([]);    
-    const [error, setError] = useState("Lista vazia");
+    const [erro, setError] = useState("Lista vazia");
     const [message, setMessage] = useState("Buscando...");
+
     useEffect(() => {
         const usuario = sessionStorage.getItem('cargo');
         if (usuario === 'Administrador') {
@@ -26,11 +27,7 @@ export default function ListaForm() {
     }
 
     async function fetchFuncionarios() {
-        setError("");
-
-        const token = sessionStorage.getItem("token");
-
-
+        setError("");       
         try {
             const response = await fetch("/api/login", {
                 method: "POST",
@@ -87,7 +84,7 @@ export default function ListaForm() {
                     </table>
                 </div>
             )}
-            {error && <p className={styles.errorMsg}>{error}</p>}
+            {erro && <p className={styles.errorMsg}>{erro}</p>}
             {message && <p className={styles.successMsg}>{message}</p>}
         </form>
     );

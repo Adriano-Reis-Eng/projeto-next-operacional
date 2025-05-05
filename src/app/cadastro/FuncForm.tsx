@@ -13,7 +13,7 @@ interface Funcionarios {
 }
 
 export default function DeleteForm() {
-    const [error, setError] = useState("");
+    const [erro, setError] = useState("");
     const [message, setMessage] = useState("");
     const [crachaBusca, setCrachaBusca] = useState("");
     const [buscando, setBuscando] = useState(false);
@@ -104,7 +104,7 @@ export default function DeleteForm() {
                     </div>
 
                 )}
-                {error && <p className={styles.errorMsg}>{error}</p>}
+                {erro && <p className={styles.errorMsg}>{erro}</p>}
                 {message && <p className={styles.successMsg}>{message}</p>}
             </form>
         </>

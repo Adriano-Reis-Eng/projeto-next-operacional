@@ -26,7 +26,7 @@ export function getToken(token: string | null): Payload | null {
       const payload = jwtDecode<Payload>(token);
       return payload;
     } catch (error) {
-      console.error("Erro ao decodificar token:", error);
+      return null;
     }
   }
   return null;

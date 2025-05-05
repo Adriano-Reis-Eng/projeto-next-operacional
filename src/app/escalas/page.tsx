@@ -27,7 +27,7 @@ export default function EscalaPage() {
     const [nome, setNome] = useState("");
     const [escala, setEscala] = useState<Escala[]>([]);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
+    const [erro, setError] = useState<string | null>(null);
     const [tipoEscala, setTipoEscala] = useState("semana");
     const [dia_semana, setDiaSemana] = useState("");
 
@@ -96,8 +96,8 @@ export default function EscalaPage() {
     return (
         <main className={styles.main}>
             <div className={styles.container}>
-                {error ? (
-                    <p className={styles.errorMsg}>{error}</p>
+                {erro ? (
+                    <p className={styles.errorMsg}>{erro}</p>
                 ) : (
                     <h2 className={styles.usuario}>{nome} {cracha}</h2>
                 )}

@@ -13,7 +13,7 @@ export default function Cadastro() {
     const [senha, setSenha] = useState("");
     const [escala, setEscala] = useState("");
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
+    const [erro, setError] = useState("");
     const [message, setMessage] = useState("");
 
     async function handleSubmit(e: React.FormEvent) {
@@ -180,7 +180,7 @@ export default function Cadastro() {
                         {loading ? "Enviando..." : "Enviar"}
                     </InputBtn>
                 </div>                
-                {error && <p className={styles.errorMsg}>{error}</p>}
+                {erro && <p className={styles.errorMsg}>{erro}</p>}
                 {message && <p className={styles.successMsg}>{message}</p>}
             </form>
         </>

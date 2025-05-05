@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./DeleteForm.module.css"
 
 export default function DeleteForm() {
-    const [error, setError] = useState("");
+    const [erro, setError] = useState("");
     const [message, setMessage] = useState("");    
     const [crachaBusca, setCrachaBusca] = useState("");
     const [buscando, setBuscando] = useState(false);
@@ -103,7 +103,7 @@ export default function DeleteForm() {
                     className={styles.submitBtn}>
                     {buscando ? "Buscando..." : "Buscar"}
                 </button>
-                {error && <p className={styles.errorMsg}>{error}</p>}
+                {erro && <p className={styles.errorMsg}>{erro}</p>}
                 {message && <p className={styles.successMsg}>{message}</p>}
             </form>
             <form onSubmit={handleSubmit} className={styles.delForm}>
