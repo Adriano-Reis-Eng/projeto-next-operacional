@@ -47,7 +47,7 @@ export default function EscalaPage() {
                 });
                 const result = await response.json();
                 if (result.success == false) {
-                    setMessage('Sem periodo de férias programado.');
+                    setMessage('Sem escala programada.');
                 }
                 else if (result.success == true) {
                     setLista(result.message);

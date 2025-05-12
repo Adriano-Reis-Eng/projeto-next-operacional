@@ -84,7 +84,7 @@ export default function Cadastro() {
                 <div className={styles.container}>
                     <form onSubmit={handleSubmit} className={styles.cadForm}>
                         <div className={styles.formGroup}>
-                            <h1 className={styles.title}>Cadastre sua senha</h1>
+                            <h1 className={styles.title}>Altere a sua senha</h1>
                             <label htmlFor="cracha" className={styles.label} style={{ color: crachaValido ? 'green' : 'red' }}>Crachá:</label>
                             <input
                                 id="cracha"
