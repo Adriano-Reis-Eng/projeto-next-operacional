@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Blinker } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { LayoutWrapper } from "./LayoutWrapper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const blinker = Blinker({
+  variable: "--font-blinker",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300"]
 });
 
 export const metadata: Metadata = {
@@ -43,12 +38,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+    <html lang="pt-br">      
+      <body        
+        className={`${blinker.variable} antialiased`}>                        
+        <LayoutWrapper>{children}</LayoutWrapper>        
       </body>
     </html>
   );

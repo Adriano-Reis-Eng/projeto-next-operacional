@@ -1,0 +1,131 @@
+.main {
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 140px 200px 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.containerBtn {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.containerAviso {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.menuSection {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    padding: 1rem;
+}
+
+.menuSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.link {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    color: #333;
+    border-bottom: 4px solid transparent;
+    text-align: left;
+    transition: font-size 0.1s ease, border-color 0.3s ease;
+}
+
+.link:hover {
+    border-bottom: 4px solid #aaa;
+}
+
+.active {
+    border-bottom: 4px solid #ff8c09;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.sectionAviso {
+    border: 2px solid #ff8c09;
+    width: 80%;
+    height: 70dvh;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;    
+    padding: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.avisoBox {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.avisoBox h1 {
+    margin-bottom: 50px;
+}
+
+.avisoBox h2 {
+    text-align: left;
+    white-space: pre-line;
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .menuSection {
+        order: 1;
+        width: 100%;
+        padding: 0.5rem;
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+    .containerBtn {
+        order: 2;
+        align-self: flex-start;
+        margin: 0.5rem 0;
+    }
+
+    .containerAviso {
+        order: 3;
+        width: 100%;
+    }
+
+    .sectionAviso {
+        background-color: #fff;
+        order: 4;
+        width: 85%;
+        height: auto;
+        border-width: 1px;
+        padding: 1rem 0.5rem;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .avisoBox h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    .avisoBox h2 {
+        font-size: 1rem;
+    }
+}

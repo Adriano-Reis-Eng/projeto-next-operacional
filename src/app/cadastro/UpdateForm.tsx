@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import styles from "./UpdateForm.module.css";
-import InputBtn from "../components/InputBtn";
+import InputBtn from "../components/inputBtn/InputBtn";
 
 export default function Update() {
     const [cracha, setCracha] = useState("");

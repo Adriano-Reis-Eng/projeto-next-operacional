@@ -6,7 +6,7 @@ type Payload = {
   cargo: string;
   exp: number;
 };
-
+// Valida expiração do token 
 export function validToken(token: string | null): boolean {
   if (token) {
     try {
@@ -20,7 +20,7 @@ export function validToken(token: string | null): boolean {
   return false;
 }
 
-export function getToken(token: string | null): Payload | null {
+export function payloadToken(token: string | null): Payload | null {
   if (token) {
     try {
       const payload = jwtDecode<Payload>(token);

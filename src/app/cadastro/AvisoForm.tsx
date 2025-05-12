@@ -19,13 +19,13 @@ export default function AvisoForm() {
             }}
             className="formAviso">
             <h1 style={{ color: 'black', textAlign: 'center' }}>
-                Atenção!
+                Ops!
             </h1>
             <h1 style={{ color: 'black', textAlign: 'center' }}>
-                Somente administradores podem fazer alterações nos cadastros.
+                Este modulo ainda está em construção. 
             </h1>
             <h2 style={{ color: 'black', textAlign: 'center' }}>
-                Caso seja necessário alterar alguma informação procure o seu Administrador.
+                Estamos preparando tudo para facilitar o seu acesso as informações!
             </h2>
         </form>
     );

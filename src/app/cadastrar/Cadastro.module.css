@@ -1,0 +1,115 @@
+.mainCadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100dvh;
+    background-image: url('/imgporta.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    background-color: #fff;
+    width: auto;
+    min-width: 250px;
+    height: auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+.cadForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #1f2937;
+}
+
+.label {
+    display: block;
+    font-size: 1rem;    
+    margin-bottom: 0.10rem;
+}
+
+.input {
+    width: 95%;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #d97706;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #1f2937;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+    border-color: #f59e42;
+    box-shadow: 0 0 0 2px #fde68a44;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+
+.avisos {
+    margin: 0 auto;
+    font-size: small;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    color: #171717;
+    text-decoration: none;
+    margin: 20px auto 0 auto;
+    position: relative;
+    padding: 0.25rem 0;
+    transition: color 0.2s;   
+    width: 40px;    
+}
+
+.link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #ff8c09;
+    transition: width 0.3s cubic-bezier(.4, 0, .2, 1), left 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.link:hover {
+    color: #ff8c09;
+}
+
+.link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.containerBtn{
+    margin-top: 10%;
+    margin-left: 90%;
+
+}
+
+@media screen and (max-width: 480px) {
+    .mainCadastro {
+        height: auto;
+    }
+}

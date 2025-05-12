@@ -1,0 +1,37 @@
+.main {
+    display: grid;
+    grid-template-rows: 70px 30px 1fr;  
+    position: relative;  
+    height: 100dvh;
+    width: 100%;
+    background-image: url('/imgporta.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.aviso {
+    grid-row: 2/3;  
+    text-align: end;
+    align-items: end;
+    justify-content: end;         
+}
+
+.errorMsg {
+    color: red;
+    margin-right: 20px;
+}
+.successMsg {
+    color: green;
+    margin-right: 20px;
+}
+.container {
+    grid-row: 3/4;
+    margin: 0 auto;
+    background-color: #fff;  
+    max-height: 75%;
+    min-width: 30%;  
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}

@@ -102,7 +102,6 @@ export default function DeleteForm() {
                         </table>
 
                     </div>
-
                 )}
                 {erro && <p className={styles.errorMsg}>{erro}</p>}
                 {message && <p className={styles.successMsg}>{message}</p>}

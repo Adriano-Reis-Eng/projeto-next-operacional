@@ -1,0 +1,86 @@
+/* Navbar que se transforma em Sidebar */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;  
+  height: 100%;
+  width: 100px;
+  background: gray;
+  padding: 1rem 1rem;
+  display: grid;
+  grid-template-rows: 100px 1fr;    
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.9);
+  z-index: 100;
+}
+
+.links {     
+  display: flex;
+  flex-direction:column;
+  gap: 1rem;    
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;  
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #171717;
+  margin-bottom: 2rem;
+}
+
+.logoIcon {
+  width: 30px;
+  height: 30px;
+  background-image: url('../../favicon.ico');
+  border-radius: 50%;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;  
+  transition: transform 0.5s ease, box-shadow 0.3s ease, background 1s, opacity 1s;
+}
+
+.logoIcon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+.link {
+  color: #171717;
+  text-decoration: none;  
+  font-weight: 500;
+  position: relative;  
+  transition: color 0.2s;
+}
+
+.link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ff8c09;
+  transition: width 0.3s cubic-bezier(.4, 0, .2, 1), left 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.link:hover {
+  color: #ff8c09;
+}
+
+.link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.sairBtn {
+  display: none;
+}
+
+
+@media screen and (max-width: 480px) {
+  .nav{
+    display: none;
+  }  
+}

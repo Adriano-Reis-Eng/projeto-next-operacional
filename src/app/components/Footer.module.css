@@ -1,5 +1,5 @@
 .footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -100,3 +100,9 @@
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+@media screen and (max-width: 480px) {
+    .logoText{
+        opacity: 0;       
+    }
+}    

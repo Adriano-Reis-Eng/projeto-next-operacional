@@ -1,0 +1,18 @@
+.nomeUsuario {          
+    display: flex;
+    font-style: italic;
+    align-items: center;
+    flex-direction: row;    
+    justify-content: end;    
+    font-size: 1.5rem;
+    height: 10px;
+    width: auto;
+    padding: 1rem;
+    gap: 10px;
+}
+@media screen and (max-width: 480px) {
+    .nomeUsuario {
+        justify-content: flex-end;
+        font-size: 1.2rem;
+    }    
+}

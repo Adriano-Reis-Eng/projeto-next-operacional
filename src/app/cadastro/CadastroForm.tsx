@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import styles from "./CadastroForm.module.css";
-import InputBtn from "../components/InputBtn";
+import InputBtn from "../components/inputBtn/InputBtn";
 
 export default function Cadastro() {
     const [cracha, setCracha] = useState("");

@@ -1,0 +1,22 @@
+.button {
+    background-image: url('/voltar.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: transparent;
+    transition: box-shadow 0.3s ease, background 1s, opacity 1s;
+}
+
+.button:hover {
+    background-color: transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
+
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
