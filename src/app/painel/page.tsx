@@ -29,6 +29,8 @@ const menus: Record<Cargo, MenuItem[]> = {
         { href: "/escalas", label: "Escala", description: "Escala detalhada do funcionário." },
         { href: "/servico", label: "Serviço", description: "Escala de serviço diaria." },
         { href: "/cadastrar", label: "Senha de acesso", description: "Recadastrar senha" },
+        { href: "/aviso", label: "Exames", description: "Exames periodicos e toxicologicos" },
+        { href: "/aviso", label: "Palestras", description: "Listas de convocação para as palestras" },        
     ],
 };
 
