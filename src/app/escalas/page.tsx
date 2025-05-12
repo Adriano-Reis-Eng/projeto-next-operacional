@@ -1,12 +1,10 @@
 'use client'
 import { useState, useEffect } from "react";
-import { payloadToken } from "../../utils/jwt";
 import Cookies from "js-cookie";
-//import InputBtn from "../components/inputBtn/InputBtn";
-import styles from "./Escalas.module.css"
+import styles from "./Escalas.module.css";
+import Usuario from "../components/usuario/usuario";
+import { payloadToken } from "@/utils/jwt";
 import BackBtn from "../components/backBtn/BackBtn";
-//import Usuario from "../components/usuario/usuario";
-//import AvisoForm from "../cadastro/AvisoForm";
 
 interface Escala {
     idEscala: string;
@@ -22,11 +20,7 @@ interface Escala {
 
 export default function EscalaPage() {
     const [message, setMessage] = useState("");
-    const [cracha, setCracha] = useState("");
-    const [nome, setNome] = useState("");
-    const [escala, setEscala] = useState<Escala[]>([]);
-    //const [loading, setLoading] = useState(false);
-    const [erro, setError] = useState<string | null>(null);    
+    const [lista, setLista] = useState<Escala[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -36,12 +30,6 @@ export default function EscalaPage() {
             if (token) {
                 const user = payloadToken(token);
                 func = user?.cracha || "";
-                if (user?.cracha) {
-                    setCracha(user.cracha);
-                }
-                if (user?.nome) {
-                    setNome(user.nome);
-                }
             }
 
             try {
@@ -62,94 +50,62 @@ export default function EscalaPage() {
                     setMessage('Sem periodo de férias programado.');
                 }
                 else if (result.success == true) {
-                    setEscala(result.message);
+                    setLista(result.message);
                     setMessage("");
                 }
             } catch {
                 setMessage("Erro ao conectar com o servidor.");
-                setError("")
             }
         };
 
         fetchData();
-    }, []);    
+    }, []);
 
-    // async function handleSubmit(e: React.FormEvent) {
-    //     e.preventDefault();
-    //     const token = Cookies.get("token");
-    //     const valdToken = validToken(token || "")
-    //     if (valdToken === true) {
-    //         setLoading(true);
-    //         setError("");
-    //         try {
-
-    //             const response = await fetch("/api/login", {
-    //                 method: "POST",
-    //                 headers: { "Content-Type": "application/json" },
-    //                 body: JSON.stringify({
-    //                     funcao: "Escala",
-    //                     token: sessionStorage.getItem("token"),
-    //                     data: {
-    //                         cracha,
-    //                         tipoEscala
-    //                     }
-    //                 })
-    //             })
-    //             const result = await response.json();
-    //             console.log(result)
-    //             if (result.success == false) {
-    //                 setDiaSemana("Sem escala programada.");
-    //                 setEscala([result]);
-    //             }
-    //             else if (result.success == true) {
-    //                 setEscala([result.message]);
-    //                 setDiaSemana(result.message.dia || "");
-    //                 setError("");
-    //             }
-    //         } catch {
-    //             setError("Erro ao conectar com o servidor.");
-    //         } finally {
-    //             setLoading(false);
-    //         }
-    //     }
-    //     else {
-    //         setLoading(false);
-    //     }
-    // }
+    
     return (
         <main className={styles.main}>
-            <div className={styles.containerUser}>                
-                <section className={styles.containerBtn}>
-                    <BackBtn />
-                </section>
-                {erro ? (
-                    <p className={styles.errorMsg}>{erro}</p>
-                ) : (
-                    <h2 className={styles.usuario}>{nome}<br /> {cracha}</h2>
-                )}
-            </div>
-            <div className={styles.content}>
+            <section className={styles.containerUser}>                
+                <Usuario />
+            </section>
+            <section className={styles.containerBtn}>                
+                <BackBtn />                
+            </section>
+            <section className={styles.containerLista}>
                 {message && <p className={styles.successMsg}>{message}</p>}
-                {escala.length > 0 && (
-
-                    <div className={styles.cardContainer}>
-                        <h2>Escala:</h2>
-                        {escala.map((item, idx) => (
-                            <div className={styles.card} key={idx}>
-                                <p>Escala: {item.idEscala}</p>
-                                <p>Início (Semana): {item.semanainicio}</p>
-                                <p>Final (Semana): {item.semanafim}</p>
-                                <p>Início (Sábado): {item.sabadoinicio}</p>
-                                <p>Final (Sábado): {item.sabadofim}</p>
-                                <p>Início (Domingo) {item.sabadoinicio}</p>
-                                <p>Final (Domingo): {item.domingofim}</p>
-                                <p>Suplementar 2º/6º:{item.suplementarDU}</p>
-                                <p>Suplementar Sábado: {item.suplementarS}</p>
-                            </div>
-                        ))}
-                    </div>
-                )}
-            </div>
+                <h1>Escala programada</h1>
+                <div className={styles.tabelaContainer}>
+                    <table className={styles.tabela}>
+                        <thead>
+                            <tr>
+                                <th>Linha:</th>
+                                <th>Início 2º/6:</th>
+                                <th>Fim 2º/6º:</th>
+                                <th>Suplementar 2º/6º:</th>
+                                <th>Início Sábado:</th>
+                                <th>Fim Sábado</th>
+                                <th>Suplementar Sábado</th>
+                                <th>Início Domingo</th>
+                                <th>Fim Domingo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {lista.map((item, index) => (
+                                <tr key={index}>
+                                    <td data-label="Escala:">{item.idEscala}</td>
+                                    <td data-label="Início 2º/6º:">{item.semanainicio}</td>
+                                    <td data-label="Fim 2º/6º:">{item.semanafim}</td>
+                                    <td data-label="Suplementar 2º/6º:">{item.suplementarDU}</td>
+                                    <td data-label="Inicio Sábado:">{item.sabadoinicio}</td>
+                                    <td data-label="Fim Sábado:">{item.semanafim}</td>
+                                    <td data-label="Suplementar Sábado:">{item.suplementarS}</td>
+                                    <td data-label="Início Domingo:">{item.domingoinicio}</td>
+                                    <td data-label="Fim Domingo">{item.domingofim}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </main>
     );
 } 

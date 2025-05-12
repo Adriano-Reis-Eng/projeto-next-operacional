@@ -4,10 +4,9 @@ import Cookies from "js-cookie";
 import styles from "./listaferias.module.css";
 import Usuario from "../components/usuario/usuario";
 import { payloadToken } from "@/utils/jwt";
-//import { useRouter } from "next/navigation";
 import BackBtn from "../components/backBtn/BackBtn";
 
-interface ListaFeriasProps {
+interface ListaFerias {
     setor: string;
     cracha: string;
     nome: string;
@@ -18,7 +17,7 @@ interface ListaFeriasProps {
 
 export default function ListaFerias() {
     const [message, setMessage] = useState("");    
-    const [lista, setLista] = useState<ListaFeriasProps[]>([]);    
+    const [lista, setLista] = useState<ListaFerias[]>([]);    
 
     useEffect(() => {
         const fetchData = async () => {
@@ -87,12 +86,12 @@ export default function ListaFerias() {
                         <tbody>
                             {lista.map((item, index) => (
                                 <tr key={index}>
-                                    <td data-label="Setor">{item.setor}</td>
-                                    <td data-label="Crachá">{item.cracha}</td>
-                                    <td data-label="Nome">{item.nome}</td>
-                                    <td data-label="Função">{item.funcao}</td>
-                                    <td data-label="Gozo Início">{item.gozoinicio}</td>
-                                    <td data-label="Gozo Fim">{item.gozofim}</td>
+                                    <td data-label="Setor:">{item.setor}</td>
+                                    <td data-label="Crachá:">{item.cracha}</td>
+                                    <td data-label="Nome:">{item.nome}</td>
+                                    <td data-label="Função:">{item.funcao}</td>
+                                    <td data-label="Gozo Início:">{item.gozoinicio}</td>
+                                    <td data-label="Gozo Fim:">{item.gozofim}</td>
                                 </tr>
                             ))}
                         </tbody>
