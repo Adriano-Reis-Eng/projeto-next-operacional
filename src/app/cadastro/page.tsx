@@ -55,7 +55,6 @@ export default function LoginPage() {
           <p>Apenas os usuários predefinidos não podem ser alterados.</p>
         </ul>
       </div>
-
       <div className={styles.container}>
         <div className={styles.pages}>
           {FormComponent}

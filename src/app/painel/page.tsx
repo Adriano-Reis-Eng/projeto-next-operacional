@@ -16,6 +16,7 @@ interface MenuItem {
 
 const menus: Record<Cargo, MenuItem[]> = {
     Administrativo: [
+        { href: "/relatorios", label: "Relatorios", description: "Relátorios de movimentação, dobras, pendencias e troca de serviço" },
         { href: "/soltura", label: "Soltura", description: "Tabela de movimentação da soltura" },
         { href: "/recollhimento", label: "Recolhimento", description: "Tabela de movimentação de encerramento de jornada" },
         { href: "/trocaservico", label: "Troca de serviço", description: "Lista de pedidos de troca de seriviço" },
@@ -26,6 +27,7 @@ const menus: Record<Cargo, MenuItem[]> = {
     Operacao: [
         { href: "/listaferias", label: "Férias", description: "Lista de férias de funcionários do tráfego." },
         { href: "/avisos", label: "Avisos", description: "Quadro de avisos." },
+        { href: "/uniformes", label: "Uniformes", description: "Lista de troca de uniforme." },
         { href: "/escalas", label: "Escala", description: "Escala detalhada do funcionário." },
         { href: "/servico", label: "Serviço", description: "Escala de serviço diaria." },
         { href: "/cadastrar", label: "Senha de acesso", description: "Recadastrar senha" },

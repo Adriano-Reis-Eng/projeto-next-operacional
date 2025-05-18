@@ -40,6 +40,7 @@ export default function LoginPage() {
         if (payload) {
           sessionStorage.setItem('nome', payload.nome);
           sessionStorage.setItem('cracha', payload.cracha);
+          sessionStorage.setItem('cargo', payload.cargo);
           setNome(payload.nome)
         }
         setMessage('Login realizado com sucesso!');

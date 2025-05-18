@@ -3,18 +3,31 @@
   margin: 0;    
 }
 
-:root {
+/* :root {
   --font-blinker: 'Blinker', sans-serif;  
   --background: #ffffff;
   --foreground: #171717;
-  --color1: #ff8c09;
-  --color2: gray;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: rgb(82, 82, 82);
-    --foreground: #ededed;
+    --background: rgb(27, 27, 27);
+    --foreground: #ededed;    
+  }
+} */
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --orange: #ff8c09;
+  --gray: gray;  
+}
+
+/* Tema escuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1b1b1b;
+    --foreground: #ededed;    
+    --gray: black;
   }
 }
 

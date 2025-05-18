@@ -29,11 +29,11 @@
     display: flex;
     margin-top: 10%;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
 }
 
 .tabelaContainer {
-    width: 80%;        
+    width: 80%;
 }
 
 .loadingArea {
@@ -44,7 +44,7 @@
 
 .loadingBtn {
     background-color: #ccc;
-    color: #333;
+    color: gray;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -54,9 +54,9 @@
 
 .tabela {
     width: 100%;
-    background-color: #ff8c09;
+    background-color: var(--orange);
     border-collapse: collapse;
-    font-size: 0.9rem;    
+    font-size: 0.9rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -65,17 +65,21 @@
     border: 1px solid #ccc;
     padding: 0.4rem 1rem;
     text-align: center;
+    color: black;
 }
 
 .tabela th {
     background-color: gray;
     font-weight: bold;
 }
+.tabela tbody{
+    background-color: var(--orange);
+}
 
 @media screen and (max-width: 480px) {
-    .main {        
+    .main {
         grid-template-rows: 50px auto 50px;
-        grid-template-columns: 1fr;         
+        grid-template-columns: 1fr;
     }
 
     .containerBtn {
@@ -84,46 +88,49 @@
         margin-left: 10px;
     }
 
-    .containerLista {                                      
+    .containerLista {
         grid-row: 2 / 3;
-        grid-column: 1/2;                
+        grid-column: 1/2;
         margin: 0;
-        height: 85dvh;        
+        height: 85dvh;
         display: flex;
         flex-direction: column;
     }
+
     .containerLista h1 {
-        margin-top: 120px;        
+        margin-top: 120px;
     }
 
-    .containerUser {        
-        grid-row: 3 / 4;   
-        grid-column: 1/2;     
+    .containerUser {
+        grid-row: 3 / 4;
+        grid-column: 1/2;
         height: auto;
     }
 
-    .tabelaContainer {        
+    .tabelaContainer {
         width: 100vw;
-        margin: 0;        
-        flex: 1;                
-    }
-    .tabela {       
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;     
-        background-color: transparent; 
-        box-shadow: none; 
+        margin: 0;
+        flex: 1;
     }
 
-    .tabela tbody {           
-        border-radius: 3%;      
-        height: 250px;
-        width: 80%;
-        padding: 1rem;
-        margin: 0 auto;    
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);    
+    .tabela {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        box-shadow: none;
     }
-    
+
+    .tabela tbody {
+        border-radius: 3%;
+        height: 250px;
+        width: 80%;                 
+        padding: 1rem;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
 
     /* Cada linha vira um bloco vertical */
     .tabela tr {
@@ -143,12 +150,13 @@
     .tabela td {
         display: flex;
         background-color: white;
-        justify-content: space-between;        
+        justify-content: space-between;
         padding: 0.5rem;
         position: relative;
         border: 1px solid #ff8c09;
-        font-size: 1.2rem;        
+        font-size: 1.2rem;
     }
+
     /* Crie atributos data-label no HTML para exibir título da coluna em cada célula */
     .tabela td::before {
         content: attr(data-label) ":";
