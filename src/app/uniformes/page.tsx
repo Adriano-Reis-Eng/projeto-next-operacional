@@ -1,5 +1,5 @@
 'use client'
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import styles from "./uniforne.module.css";
 import InputBtn from "../components/inputBtn/InputBtn";
