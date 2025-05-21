@@ -32,7 +32,7 @@ export default function Cadastro() {
                 body: JSON.stringify({
                     funcao: "UpdateData",
                     token: Cookies.get('token'),
-                    sheet: 'uniformes',
+                    sheet: 'Uniformes',
                     data: {
                         cracha: sessionStorage.getItem('cracha'),
                         camisa: camisa,
@@ -82,7 +82,7 @@ export default function Cadastro() {
                 body: JSON.stringify({
                     funcao: "GetData",
                     token: Cookies.get("token"),
-                    sheet: "uniformes",
+                    sheet: "Uniformes",
                     data: {
                         cracha: sessionStorage.getItem('cracha')
                     }

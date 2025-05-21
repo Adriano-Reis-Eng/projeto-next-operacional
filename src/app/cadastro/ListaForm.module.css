@@ -1,3 +1,7 @@
+.listaForm {
+    width: auto;
+    height: auto;
+}
 .buttonWrapper {
     display: flex;
     justify-content: center;
@@ -21,7 +25,7 @@
 .resultado {
     justify-items: center;    
     width: 96%;
-    height: 300px;
+    height: 52dvh;
     margin: 10px 0 0 0%;
     background: #ffff;
     border-radius: 12px;
@@ -40,9 +44,8 @@
 }
 
 .tabelaEscala {
-    background-color: #d97706;
-    ;
-    width: 90%;
+    background-color: #d97706;    
+    width: 100%;
     border-collapse: collapse;
     font-size: 1rem;
 }

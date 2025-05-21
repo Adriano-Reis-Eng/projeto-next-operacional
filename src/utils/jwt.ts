@@ -13,7 +13,8 @@ export function validToken(token: string | null): boolean {
       const { exp } = jwtDecode<Payload>(token);
       const agora = Math.floor(Date.now() / 1000);
       return exp > agora;
-    } catch {
+    } 
+    catch {
       return false;
     }
   }
@@ -25,7 +26,8 @@ export function payloadToken(token: string | null): Payload | null {
     try {
       const payload = jwtDecode<Payload>(token);
       return payload;
-    } catch {
+    } 
+    catch {
       return null;
     }
   }

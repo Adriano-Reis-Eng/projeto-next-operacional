@@ -6,38 +6,77 @@
     justify-items: center;
     align-items: center;
 }
-.container {
+
+.containerUser {
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+    justify-self: flex-end;
+}
+.containerBtn {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: flex-start;
+}
+
+.container {   
     grid-row: 2/3;
-    grid-column: 2/3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90%;
-    min-width: 400px;
-    width: auto;
-    border-radius: 5%;
+    grid-column: 2/3;      
+    height: 40%;
+    min-width: 200px;
+    width: 60%;
+    border-radius: 10px;
     padding: 20px 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
 }
 
-.cadForm {    
-    display: flex;
-    flex-direction: column;
+.cadForm {         
     width: 100%;
-    height: 90%;
-    border: 1px solid var(--orange);
-    gap: 0.5rem;
-    padding: 10px 20px;
+    height: 100%;
+    border: 1px solid var(--orange);   
+}
+.containerTroca1{                  
+    display: flex;
+    flex-wrap: nowrap;   
+}
+.contanierTroca2{          
+    display: flex;
+    flex-wrap: nowrap;    
 }
 
 .title {
+    grid-row: 1/2;
+    grid-column: 1/4;
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
     text-align: center;
     color: #1f2937;
 }
+.buttonWrapper{
+    grid-row: 4/5;
+    grid-column: 1/4;    
+    justify-self: center;
+}    
 
+
+.formGroup{
+    width: 100%;
+    padding: 10px;
+}
+.select {
+    border: 2px solid #d97706;
+    width: 100%;
+    border-radius: 7px;
+    background-color: white;
+    height: 32px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.select:focus {
+    outline: none;
+    border-color: #d97706;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
+}
 .label {
     display: block;
     font-size: 1rem;
@@ -46,7 +85,7 @@
 }
 
 .input {
-    width: 95%;
+    width: 90%;
     padding: 0.3rem 0.5rem;
     border: 2px solid #d97706;
     border-radius: 0.375rem;
@@ -62,7 +101,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 1.5px 4px rgba(0, 0, 0, 0.4);
 }
 
-.submitBtn {
+/*.submitBtn {
     width: 100%;
     background: #d97706;
     color: #fff;
@@ -82,7 +121,7 @@
 .submitBtn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-}
+} */
 
 .errorMsg {
     color: #dc2626;
@@ -98,7 +137,3 @@
     margin-top: 0.5rem;
 }
 
-.buttonWrapper {
-    display: flex;
-    justify-content: center;
-}

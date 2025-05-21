@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./ListaForm.module.css";
+import Cookies from "js-cookie";
 
 interface Funcionarios {
     cracha: string;
@@ -12,12 +13,12 @@ interface Funcionarios {
 
 export default function ListaForm() {
     const [funcionarios, setFuncionarios] = useState<Funcionarios[]>([]);    
-    const [erro, setError] = useState("Lista vazia");
-    const [message, setMessage] = useState("Buscando...");
+    const [erro, setError] = useState("");
+    const [message, setMessage] = useState("");
 
     useEffect(() => {
         const usuario = sessionStorage.getItem('cargo');
-        if (usuario === 'Administrador') {
+        if (usuario === 'Administrador' || usuario === 'Despachante' || usuario === 'Encarregado') {
             fetchFuncionarios(); // chamada automática ao carregar
         }
     }, []);
@@ -27,20 +28,22 @@ export default function ListaForm() {
     }
 
     async function fetchFuncionarios() {
-        setError("");       
+        setError("");  
+        setMessage("Buscando...")     
         try {
             const response = await fetch("/api/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     funcao: "getData",
-                    token: sessionStorage.getItem("token"),
-                    sheet: "usuarios",
+                    token: Cookies.get('token'),
+                    sheet: "Usuarios",
                     data: {
                     }
                 })
             })
             const result = await response.json();
+            console.log('teste', result)
             if (result.success == false) {
                 setError(result.message);
             }

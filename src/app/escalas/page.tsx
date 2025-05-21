@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import styles from "./Escalas.module.css";
 import Usuario from "../components/usuario/usuario";
-import { payloadToken } from "@/utils/jwt";
 import BackBtn from "../components/backBtn/BackBtn";
 
 interface Escala {
@@ -25,23 +24,16 @@ export default function EscalaPage() {
     useEffect(() => {
         const fetchData = async () => {
             setMessage('Buscando...');
-            const token = Cookies.get("token");
-            let func = "";
-            if (token) {
-                const user = payloadToken(token);
-                func = user?.cracha || "";
-            }
-
             try {
                 const response = await fetch("/api/login", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
-                        funcao: "ListaFerias",
+                        funcao: "GetData",
                         token: Cookies.get("token"),
-                        sheet: "macope",
+                        sheet: "Macope",
                         data: {
-                            cracha: func
+                            cracha: sessionStorage.getItem('cracha')
                         }
                     })
                 });
@@ -61,14 +53,14 @@ export default function EscalaPage() {
         fetchData();
     }, []);
 
-    
+
     return (
         <main className={styles.main}>
-            <section className={styles.containerUser}>                
+            <section className={styles.containerUser}>
                 <Usuario />
             </section>
-            <section className={styles.containerBtn}>                
-                <BackBtn />                
+            <section className={styles.containerBtn}>
+                <BackBtn />
             </section>
             <section className={styles.containerLista}>
                 {message && <p className={styles.successMsg}>{message}</p>}

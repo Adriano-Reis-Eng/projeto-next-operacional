@@ -22,7 +22,7 @@ const menus: Record<Cargo, MenuItem[]> = {
         { href: "/trocaservico", label: "Troca de serviço", description: "Lista de pedidos de troca de seriviço" },
         { href: "/alteracoes", label: "Movimentação", description: "Lista de alterações das movimentações de funcionários" },
         { href: "/avisos", label: "Avisos", description: "Quadro de avisos." },
-        { href: "/listaferias", label: "Cadastro", description: "Cadastro de funcionários e escalas." },
+        { href: "/cadastro", label: "Cadastro", description: "Cadastro de funcionários e escalas." },
     ],
     Operacao: [
         { href: "/listaferias", label: "Férias", description: "Lista de férias de funcionários do tráfego." },

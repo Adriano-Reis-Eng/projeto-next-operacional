@@ -34,9 +34,9 @@ export default function ListaFerias() {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
-                        funcao: "ListaFerias",
+                        funcao: "GetData",
                         token: Cookies.get("token"),
-                        sheet: "listaFerias",
+                        sheet: "ListaFerias",
                         data: {
                             cracha: func
                         }
@@ -86,12 +86,12 @@ export default function ListaFerias() {
                         <tbody>
                             {lista.map((item, index) => (
                                 <tr key={index}>
-                                    <td data-label="Setor:">{item.setor}</td>
-                                    <td data-label="Crachá:">{item.cracha}</td>
-                                    <td data-label="Nome:">{item.nome}</td>
-                                    <td data-label="Função:">{item.funcao}</td>
-                                    <td data-label="Gozo Início:">{item.gozoinicio}</td>
-                                    <td data-label="Gozo Fim:">{item.gozofim}</td>
+                                    <td data-label="Setor">{item.setor}</td>
+                                    <td data-label="Crachá">{item.cracha}</td>
+                                    <td data-label="Nome">{item.nome}</td>
+                                    <td data-label="Função">{item.funcao}</td>
+                                    <td data-label="Gozo Início">{item.gozoinicio}</td>
+                                    <td data-label="Gozo Fim">{item.gozofim}</td>
                                 </tr>
                             ))}
                         </tbody>
